@@ -10,8 +10,6 @@ async function connect(){
 }
 
 async function disconnect(){
-    if (!client) return true;
-
     await client.close();
     client = null;
     return true;

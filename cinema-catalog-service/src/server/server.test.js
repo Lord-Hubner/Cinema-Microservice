@@ -4,7 +4,7 @@ const request = require('supertest');
 
 const apiMock = jest.fn((app, repository) => {
     app.get('/error', (req, res, next) => {
-        throw new Error("Mock Error");  
+        return res.sendStatus(500); 
     })
 });
 
